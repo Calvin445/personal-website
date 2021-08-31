@@ -1,0 +1,46 @@
+<div class='content-item-container'>
+    <div class='header'>Projects</div>
+    <div class='content-item project-container'>
+        <div class='project-description'>
+            <span class='project-title'>
+                Sudoku Bot. 
+            </span>
+            Constructed a robot arm that writes solutions to Sudoku puzzles using a Raspberry Pi, 3D printed arms, and servos. 
+            Implemented simple, pixel-based character recognition for reading the contents of a puzzle grid from an image.
+        </div>
+        <img
+            class ='project-image'
+            src="../images/sudokudemo.jpeg" 
+            onmouseover="hover(this, '../images/sudokudemo.gif');" 
+            onmouseout="unhover(this, '../images/sudokudemo.jpeg');">
+        </img>
+    </div>
+
+    <div class='content-item project-container'>
+        <div class='project-description'>
+            <span class='project-title'>
+                Sticky MD.
+            </span>
+            Created a text editor app with a minimize-able floating window 
+            Implemented a markdown preview toggled via hotkey.
+        </div>
+        <img
+            class ='project-image'
+            src="../images/notesdemo.jpeg" 
+            onmouseover="hover(this, '../images/notesdemo.gif');" 
+            onmouseout="unhover(this, '../images/notesdemo.jpeg');">
+        </img>
+    </div>
+
+    <script>
+        function hover(element, source) {
+            element.setAttribute('src', source);
+            element.style.opacity = 1;
+        }
+        function unhover(element, source) {
+            element.setAttribute('src', source);
+            element.style.opacity = 0.4;
+        }
+    </script>
+</div>
+

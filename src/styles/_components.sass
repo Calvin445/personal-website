@@ -1,0 +1,51 @@
+@use 'base'
+
+// footer
+
+.footer
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  .footer-links > *
+    margin: 0 0 0 1rem
+
+nav
+  @include base.text-subtitle
+  @include base.font-medium
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+  .name
+    @include base.text-small-statement
+    @include base.font-black
+
+  .version
+    @include base.text-subtitle
+
+  .links > a
+    margin-right: 2rem
+
+  .links > a:last-child
+    margin-right: 0
+
+
+// Emojis
+
+.emoji
+  position: relative
+  z-index: -1
+  color: rgba(255,255,255)
+  font-size: 20px
+
+.emoji-box
+  position: absolute
+  display: flex
+  flex-direction: row
+
+// Intro
+.intro
+  @include base.text-statement
+  align-self: stretch
+
+

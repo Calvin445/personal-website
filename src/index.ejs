@@ -7,9 +7,14 @@
 </head>
 <body>
 <div class='container'>
-    <%- include('partials/navbar') %>
-    <div>Home</div>
-    <%- include('partials/footer') %>
+    <div class='content'>
+        <%- include('partials/emojis', { emojis: ['🎷', '💻', '👨‍💻', '☕', '👨‍🎓', '✍️'] }) %>
+        <%- include('partials/navbar') %>
+        <%- include('partials/intro') %>
+        <%- include('partials/experience') %>
+        <%- include('partials/projects') %>
+        <%- include('partials/footer') %>
+    </div>
 </div>
 </body>
 </html>

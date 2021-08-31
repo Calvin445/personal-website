@@ -3,12 +3,59 @@
 <head>
     <meta charset="utf-8">
     <title>Calvin Cai</title>
+    <link href="../styles/style.css" rel="stylesheet"/>
 </head>
 <body>
-<div>
-    <%- include('../partials/navbar') %>
-    <div>About</div>
-    <%- include('../partials/footer') %>
-</div>
+    <div class='container'>
+        <div class='content'>
+            <%- include('../partials/emojis', { emojis: ['🎷', '💻', '👨‍💻', '☕', '👨‍🎓', '✍️']}) %>
+            <%- include('../partials/navbar') %>
+            <div class='content-item about-item'>
+                <img
+                    class ='about-image'
+                    src="../images/calvin.jpg">
+                </img>
+                <div class='about-description'>
+                    <div class='about-title'>
+                        About Me
+                    </div>
+                    <div class='about-text'>
+                        I’m a CS and Math major at Northeastern University, currently finishing up my undergraduate degree.
+                    </div>
+                    <div class='about-text'>
+                        I took a gap year from Aug 2020 to Aug 2021 working at a cool crypto company called Circle, where I'll be continuing to work part-time during the school year.
+                    </div>
+                    <div class='about-title'>
+                        Let's Talk
+                    </div>
+                    <div class='about-text'>
+                        About computer stuff... or Maison Margiela, or coffee, or SSBU, or Isaiah Rashad’s latest album.
+                    </div>
+                    <div class='about-text'>
+                        <a href='mailto:cai.calvin21@gmail.com'>Email</a>
+                        <br>
+                        <a href='https://github.com/Calvin445'>Github</a>
+                        <br>
+                        <a href='https://www.linkedin.com/in/calvin-cai/'>LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class='content-item about-item'>
+                <div class='about-description'>
+                    <div class='about-title'>
+                        About Lola
+                    </div>
+                    <div class='about-text'>
+                        Lola is my family's dog. She is a shih tzu.               
+                    </div>
+                </div>
+                <img
+                    class ='lola'
+                    src="../images/lola.jpeg">
+                </img>
+            </div>
+            <%- include('../partials/footer') %>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,70 @@
+$font-stack: Inter, Helvetica, sans-serif
+$font-color: #eeeeee
+$bg-color: #111111
+$font-size: 16px
+$font-size-0: 1rem     // 12px
+$font-size-1: 1.25rem    // 18px
+$font-size-2: 1.75rem      // 24px
+$font-size-3: 2.75rem     // 36px
+
+:root
+  font: 100% $font-stack
+  color: $font-color
+  background-color: $bg-color
+
+// links
+a
+  text-decoration: none
+  color: $font-color
+
+a:link
+  color: $font-color
+
+a:visited
+  color: $font-color
+
+a:hover
+  transition: 0.2s ease
+  opacity: 0.40
+
+a:active
+  color: $font-color
+
+p
+  margin: 0
+
+// custom font
+
+@mixin font-medium
+  font-weight: 500
+
+@mixin font-bold
+  font-weight: 700
+
+@mixin font-black
+  font-weight:900
+
+@mixin font-gray
+  color: #aaaaaa
+
+// text
+
+@mixin text-statement
+  font-weight: 700
+  font-size: $font-size-3
+
+@mixin text-small-statement
+  font-weight: 500
+  font-size: $font-size-2
+
+@mixin text-header
+  font-weight: 900
+  font-size: $font-size-1
+
+@mixin text-subtitle
+  font-weight: 500
+  font-size: $font-size-0
+
+@mixin text-regular
+  font-weight: 400
+  font-size: $font-size-1

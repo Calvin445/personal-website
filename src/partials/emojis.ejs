@@ -1,0 +1,35 @@
+<div class='emoji-box'>
+    <% emojis.forEach(function(emoji) { %>
+        <div class = 'emoji'><%= emoji %></div>
+    <% }); %>
+    <script>
+        // document.querySelectorAll('.emoji').forEach(emoji => {
+        //     move(emoji, 3.5 + Math.random(), 1.5 + Math.random(), 2, 3, 0, 0.5, (random(10) + 5)/5000)
+        // })
+
+        document.querySelectorAll('.emoji').forEach(emoji => {
+            move(emoji, 3.5 + Math.random(), 1.5 + Math.random(), 2, 3, 0, 0.5, (random(10) + 5)/5000)
+        })
+    
+    
+        function random(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        function move(e, width, height, periodX, periodY, offsetX, offsetY, speed) {
+            var top, left, size; 
+            var theta = 2 * Math.random() * Math.PI;
+            function frame() {
+                top = (height * Math.sin(periodY * theta)) + offsetY;
+                left = (width * Math.cos(periodX * theta)) + offsetX;
+                e.style.top = top + 'rem';
+                e.style.left = left + 'rem';
+                theta += speed;
+                if (theta > 2 * Math.PI) {
+                    theta = 0;
+                }
+            }
+            setInterval(frame, 5);
+        }
+    </script>
+</div>

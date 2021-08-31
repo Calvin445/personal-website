@@ -20,6 +20,13 @@ gulp.task('build:css', () => {
         .pipe(connect.reload());
 });
 
+gulp.task('build:images', () => {
+    return gulp.src('src/images/**/*')
+        .pipe(gulp.dest('dist/images'))
+        .pipe(connect.reload());
+});
+
+
 gulp.task('build:index', () => {
     return gulp.src('src/index.ejs')
         .pipe(ejs())
@@ -38,14 +45,15 @@ gulp.task('build:about', () => {
         .pipe(connect.reload());
 });
 
-gulp.task('watch', (done) => {
+gulp.task('watch', () => {
     gulp.watch(['src/styles/**/*.sass'], gulp.series('build:css'));
     gulp.watch(['src/index.ejs'], gulp.series('build:index'));
     gulp.watch(['src/about/**/*.ejs'], gulp.series('build:about'));
 
     gulp.watch(['src/partials/**/*.ejs'], gulp.series('build'));
+    gulp.watch(['src/images/**/*'], gulp.series('build'));
 });
 
-gulp.task('build', gulp.parallel('build:css', 'build:index', 'build:about'));
+gulp.task('build', gulp.parallel('build:css', 'build:images', 'build:index', 'build:about'));
 
 gulp.task('default', gulp.series('build', gulp.parallel('connect', 'watch')));
