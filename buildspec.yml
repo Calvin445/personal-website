@@ -1,7 +1,7 @@
 version: 0.2
 
 env:
-  shell: zsh
+  shell: /bin/sh
         
 phases:
   pre_build:
