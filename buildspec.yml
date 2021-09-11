@@ -1,0 +1,16 @@
+version: 0.2
+
+env:
+  shell: zsh
+        
+phases:
+  pre_build:
+    commands:
+      - ls -la 
+  build:
+    commands:
+      - npm ci
+      - gulp build
+artifacts:
+  files:
+    - dist/*
